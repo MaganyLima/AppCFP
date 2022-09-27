@@ -11,6 +11,26 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'cadastro-usuario',
+    loadChildren: () => import('./cadastro-usuario/cadastro-usuario.module').then( m => m.CadastroUsuarioPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'inicio',
+    loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
+  },
+  {
+    path: 'rgistrar-lcmnto',
+    loadChildren: () => import('./rgistrar-lcmnto/rgistrar-lcmnto.module').then( m => m.RgistrarLcmntoPageModule)
+  },
+  {
+    path: 'lancamentos',
+    loadChildren: () => import('./lancamentos/lancamentos.module').then( m => m.LancamentosPageModule)
+  },
 ];
 
 @NgModule({
