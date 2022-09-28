@@ -1,9 +1,68 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>inicio</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-
+  <div class="logotipo">
+    <img src="https://cdn.pixabay.com/photo/2016/10/25/18/49/money-1769716_1280.png" alt="">
+  </div>
+  <div class="sair">
+    <ion-row>
+      <ion-col>
+        <ion-button color="danger" size="small"(click)="sair()">Sair
+          <ion-icon name="power-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </div>
+  <div class="usuario">
+    <ion-item >
+      <ion-avatar slot="start" >
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-avatar>
+      <ion-label> </ion-label>
+      <ion-input type="string">Usuário</ion-input>
+    </ion-item>
+  </div>
+  <div class="geral">
+    <ion-text>Saldo Geral</ion-text>
+    <ion-item>
+      <ion-input>R$00,00</ion-input>
+    </ion-item>
+  </div>
+  <div class="mensal">
+    <ion-text>Saldo Mensal</ion-text>
+    <ion-item>
+      <ion-input>R$00,00</ion-input>
+      <ion-button>
+        <ion-icon name="calendar-number-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </div>
+  <div class="botoes">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          <ion-button size="large" >
+            <div class="planeja">
+            <ion-icon name="cash-outline"></ion-icon>
+            <ion-text>Planejam...</ion-text>
+            </div>
+          </ion-button>
+        </ion-col>
+        <ion-col size="4">
+          <ion-button size="large"(click)="adicionar()">
+            <div class="adicionar">
+            <ion-icon name="add-circle-outline"></ion-icon>
+            <ion-text>Adicionar</ion-text>
+            </div>
+          </ion-button>
+        </ion-col>
+        <ion-col size="4">
+          <ion-button size="large" (click)="lancamentos()">
+            <div class="lancamento">
+              <ion-icon name="swap-horizontal-outline"></ion-icon>
+            <ion-text>Lançam...</ion-text>
+            </div>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
 </ion-content>

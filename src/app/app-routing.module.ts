@@ -24,10 +24,6 @@ const routes: Routes = [
     loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
   },
   {
-    path: 'rgistrar-lcmnto',
-    loadChildren: () => import('./rgistrar-lcmnto/rgistrar-lcmnto.module').then( m => m.RgistrarLcmntoPageModule)
-  },
-  {
     path: 'lancamentos',
     loadChildren: () => import('./lancamentos/lancamentos.module').then( m => m.LancamentosPageModule)
   },

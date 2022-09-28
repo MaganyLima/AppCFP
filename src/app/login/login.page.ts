@@ -14,6 +14,6 @@ export class LoginPage implements OnInit {
   }
 
   entrar(){
-    this.navCtrl.navigateRoot('cadastro-usuario');
+    this.navCtrl.navigateRoot('inicio');
   }
 }

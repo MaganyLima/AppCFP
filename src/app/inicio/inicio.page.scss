@@ -1,0 +1,79 @@
+.logotipo{
+  position: fixed;
+  top: 20px;
+  width: 60px;
+  left: 50px;
+}
+.sair{
+  position: fixed;
+  top: 100px;
+  left: 150px;
+}
+
+.usuario{
+  position: fixed;
+  top: 180px;
+  ion-icon{
+    font-size: 8vh;
+  }
+}
+
+.geral{
+  position: fixed;
+  top: 250px;
+  font-size: 16px;
+  text-align: center;
+
+}
+.mensal{
+  position: fixed;
+  top: 350px;
+  text-align: center;
+}
+
+.botoes{
+  ion-button{
+    position: relative;
+    top: 480px;
+    width: 100%;
+    .planeja{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      ion-icon{
+      font-size: 40px;
+      padding-left: 30%;
+      }
+      ion-text{
+      font-size: 10px;
+      padding-left: 5px;
+      }
+    }
+    .adicionar{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      ion-icon{
+      font-size: 40px;
+      padding-left: 20%;
+      }
+      ion-text{
+      font-size: 10px;
+      padding-left: 5px;
+      }
+    }
+    .lancamento{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      ion-icon{
+      font-size: 40px;
+      padding-left: 20%;
+      }
+      ion-text{
+      font-size: 10px;
+      padding-left: 5px;
+      }
+    }
+  }
+}
