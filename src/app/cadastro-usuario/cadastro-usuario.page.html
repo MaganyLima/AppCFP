@@ -1,9 +1,40 @@
+<!--
 <ion-header>
   <ion-toolbar>
     <ion-title>cadastroUsuario</ion-title>
   </ion-toolbar>
 </ion-header>
+-->
 
 <ion-content>
-
+  <div class="titulo">
+    <ion-text>Controle Finaceiro Pessoal</ion-text>
+  </div>
+  <div class="texto">
+    <ion-text>
+      Faça seu Cadastro
+    </ion-text>
+  </div>
+  <div class="cadastro">
+    <ion-item button="">
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input [(ngModel)]="nome"type="text"></ion-input>
+    </ion-item>
+    <ion-item button="">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input [(ngModel)]="email"type="email"></ion-input>
+    </ion-item>
+    <ion-item button="">
+      <ion-label position="floating">Senha</ion-label>
+      <ion-input [(ngModel)]="senha"type="password"></ion-input>
+    </ion-item>
+  </div>
+  <div class="botao">
+    <ion-button (click)="cadastrar()" color="success" expand="full" >
+      <div class="confirmar">
+        <ion-text>Cadastrar</ion-text>
+        <ion-icon name="checkmark-done-outline"></ion-icon>
+      </div>
+    </ion-button>
+  </div>
 </ion-content>

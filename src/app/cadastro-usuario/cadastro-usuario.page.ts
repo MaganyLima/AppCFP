@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-cadastro-usuario',
@@ -6,10 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cadastro-usuario.page.scss'],
 })
 export class CadastroUsuarioPage implements OnInit {
+  nome='';
+  email='';
+  senha='';
 
-  constructor() { }
+  constructor(private navCtrl: NavController) {
+   }
 
   ngOnInit() {
+
+  }
+  cadastrar(){
+    this.navCtrl.navigateRoot('login');
   }
 
+  mudancas(){
+    console.log('nome',this.nome);
+    console.log('email',this.email);
+    console.log('senha',this.senha);
+  }
 }
