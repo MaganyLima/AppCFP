@@ -16,7 +16,7 @@ export class InicioPage implements OnInit {
     this.navCtrl.navigateRoot('login');
   };
   adicionar(){
-    this.navCtrl.navigateRoot('registrar-lcmnto');
+    this.navCtrl.navigateRoot('registrar-lcmto');
   };
   lancamentos(){
     this.navCtrl.navigateRoot('lancamentos');

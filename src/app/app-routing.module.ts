@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'lancamentos',
     loadChildren: () => import('./lancamentos/lancamentos.module').then( m => m.LancamentosPageModule)
   },
+  {
+    path: 'registrar-lcmto',
+    loadChildren: () => import('./registrar-lcmto/registrar-lcmto.module').then( m => m.RegistrarLcmtoPageModule)
+  },
 ];
 
 @NgModule({
