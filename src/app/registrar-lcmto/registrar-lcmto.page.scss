@@ -1,0 +1,71 @@
+ion-header{
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+}
+.botao{
+  text-align: center;
+  position: relative;
+  top: 30px;
+  ion-button{
+  .confirma{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  ion-icon{
+    font-size: 40px;
+    padding-left: 30%;
+  }
+  ion-text{
+    font-size: 12px;
+    text-align: center;
+  }
+}
+  }
+}
+
+.botoes{
+  ion-button{
+    position: relative;
+    top: 50px;
+    width: 100%;
+    .inicio{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      ion-icon{
+      font-size: 40px;
+      padding-left: 10%;
+      }
+      ion-text{
+      font-size: 10px;
+      padding-left: 5px;
+      }
+    }
+    .lancam{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    ion-icon{
+    font-size: 40px;
+    padding-left: 22%;
+    }
+    ion-text{
+    font-size: 10px;
+    padding-left: 5px;
+    }
+    }
+    .planejam{
+      display: flex;
+      flex-direction: column;
+      ion-icon{
+      font-size: 40px;
+      padding-left: 22%;
+      }
+      ion-text{
+      font-size: 10px;
+      padding-left: 5px;
+      }
+    }
+  }
+}
