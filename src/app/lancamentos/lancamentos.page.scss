@@ -1,0 +1,88 @@
+ion-header{
+  text-align: center;
+  ion-title{
+  font-size: 20px;
+  font-weight: bold;
+  }
+}
+.lancamentos{
+  position: relative;
+  top: 50px;
+  ion-list{
+    ion-item{
+      h1{
+        font-size: 10px;
+        font-weight: bold;
+      }
+      p{
+        font-size: 10px;
+      }
+    #despesa{
+      font-size: 12px;
+      font-weight: bold;
+      color: red;
+      }
+    #receita{
+      font-size: 12px;
+      font-weight: bold;
+      color: green;
+    }
+    }
+
+  }
+}
+ion-footer{
+  .botoes{
+  position:sticky;
+  top: 250px;
+  ion-button{
+    width: 100%;
+  }
+  .inicio{
+    height: 100px;
+    padding: 25px;
+    margin: 0 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  ion-icon{
+    font-size: 70px;
+  }
+  ion-text{
+    font-size: 10px;
+    text-align: center;
+    }
+  }
+  .adicionar{
+    height: 100px;
+    padding: 25px;
+    margin: 0 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  ion-icon{
+    font-size: 70px;
+  }
+  ion-text{
+    font-size: 10px;
+    text-align: center;
+  }
+  }
+  .planeja{
+    height: 100px;
+    padding: 25px;
+    margin: 0 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  ion-icon{
+    font-size: 70px;
+  }
+  ion-text{
+    font-size: 10px;
+    text-align: center;
+  }
+  }
+}
+}
+

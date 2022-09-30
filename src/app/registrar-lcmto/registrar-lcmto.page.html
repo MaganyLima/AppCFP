@@ -6,39 +6,14 @@
 
 <ion-content [fullscreen]="true">
   <div class="tipolancamento">
-    <!--
-      <ion-button (click)="this.tiporegistro=true">
-      <ion-label>Tipo de Registro</ion-label>
-    </ion-button>
-    -->
     <ion-list>
       <ion-item>
         <ion-select interface="action-sheet" placeholder="Tipo de Registro">
-          <ion-select-option value="despesa">Despesa</ion-select-option>
-          <ion-select-option value="receita">Receita</ion-select-option>
+          <ion-select-option >Despesa</ion-select-option>
+          <ion-select-option >Receita</ion-select-option>
         </ion-select>
       </ion-item>
     </ion-list>
-    <!--
-    <ion-grid *ngIf="tiporegistro">
-      <ion-row>
-        <ion-select>
-        <ion-col>
-          <ion-item>
-            <ion-label color="danger"><b>Despesas</b></ion-label>
-            <ion-input type="string"></ion-input>
-          </ion-item>
-        </ion-col>
-          <ion-col>
-          <ion-item>
-            <ion-label color="success"><b>Receitas</b></ion-label>
-            <ion-input type="string"></ion-input>
-          </ion-item>
-        </ion-col>
-        </ion-select>
-      </ion-row>
-    </ion-grid>
-  -->
     <ion-item>
       <ion-label position="floating">Valor R$</ion-label>
       <ion-input></ion-input>
@@ -53,24 +28,9 @@
     </ion-item>
     <ion-item >
       <ion-select interface="action-sheet" placeholder="Categoria">
-        <ion-select-option ngDefaultCotrol [value]="ctg.nome"*ngFor="let ctg of categoriaLan">{{ctg.nome}}</ion-select-option>
-      <!--
-        <ion-select-option value="alimentação">Alimentação</ion-select-option>
-        <ion-select-option value="assinaturas">Assinaturas</ion-select-option>
-        <ion-select-option value="casa">Casa</ion-select-option>
-        <ion-select-option value="compras">Compras</ion-select-option>
-        <ion-select-option value="cds pessoais">Cuidados pessoais</ion-select-option>
-        <ion-select-option value="emprestimo">Empréstimo</ion-select-option>
-        <ion-select-option value="hbs lzr">Hobbies e lazer</ion-select-option>
-        <ion-select-option value="ipts txs">Impostos e taxas</ion-select-option>
-        <ion-select-option value="investimento">Investimento</ion-select-option>
-        <ion-select-option value="mercado">Mercado</ion-select-option>
-        <ion-select-option value="outros">Outros</ion-select-option>
-        <ion-select-option value="salario">Salário</ion-select-option>
-        <ion-select-option value="saude">Saúde</ion-select-option>
-        <ion-select-option value="trabalho">Trabalho</ion-select-option>
-        <ion-select-option value="transporte">Transporte</ion-select-option>
-      -->
+        <ion-select-option ngDefaultCotrol [value]="ctg.nome"*ngFor="let ctg of categoriaLan">
+          {{ctg.nome}}
+        </ion-select-option>
       </ion-select>
     </ion-item>
   </div>
