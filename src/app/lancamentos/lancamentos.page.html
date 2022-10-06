@@ -5,59 +5,96 @@
 </ion-header>
 <ion-content>
   <div class="lancamentos">
-  <ion-list>
-    <ion-item *ngFor="let lan of tdsLancamentos; index as i">
-      <ion-label>
-          <p id="despesa" *ngIf="lan[0]==='Despesa'">{{lan[4]}}</p>
-          <p id="receita" *ngIf="lan[0]==='Receita'">{{lan[4]}}</p>
-          <h1 id="despesa" *ngIf="lan[0]==='Despesa'">{{lan[2]}}</h1>
-          <h1 id="receita" *ngIf="lan[0]==='Receita'">{{lan[2]}}</h1>
-          <p id="despesa" *ngIf="lan[0]==='Despesa'">{{lan[3]}}</p>
-          <p id="receita" *ngIf="lan[0]==='Receita'">{{lan[3]}}</p>
-          <p id="despesa" *ngIf="lan[0]==='Despesa'">{{lan[1]}}</p>
-          <p id="receita" *ngIf="lan[0]==='Receita'">{{lan[1]}}</p>
-      </ion-label>
-    </ion-item>
-  </ion-list>
-</div>
-<ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
-  <ion-infinite-scroll-content
-    loadingSpinner="circles"
-    loadingText="Carregando...">
-  </ion-infinite-scroll-content>
-</ion-infinite-scroll>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="7">
+          <ion-list>
+            <ion-item *ngFor="let lan of tdsLancamentos">
+              <ion-label>
+                <p id="despesa" *ngIf="lan[0]==='Despesa'">{{lan[4]}}</p>
+                <p id="receita" *ngIf="lan[0]==='Receita'">{{lan[4]}}</p>
+                <p id="despesa" *ngIf="lan[0]==='Despesa'">{{lan[3]}}</p>
+                <p id="receita" *ngIf="lan[0]==='Receita'">{{lan[3]}}</p>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+        <ion-col size="5">
+          <ion-list>
+            <ion-item *ngFor="let lan of tdsLancamentos">
+              <ion-label>
+                <p id="despesa" *ngIf="lan[0]==='Despesa'">{{lan[2]}}</p>
+                <p id="receita" *ngIf="lan[0]==='Receita'">{{lan[2]}}</p>
+                <p id="despesa" *ngIf="lan[0]==='Despesa'">R${{lan[1]}}</p>
+                <p id="receita" *ngIf="lan[0]==='Receita'">R${{lan[1]}}</p>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </div>
 </ion-content>
 <ion-footer class="ion-no-border">
   <ion-toolbar>
-    <div class="botoes">
-  <ion-list>
-    <ion-row>
-      <ion-col size="4">
-        <ion-button size="large" (click)="inicio()">
-          <div class="inicio">
-          <ion-icon name="home-outline"></ion-icon>
-          <ion-text>Inicio</ion-text>
-          </div>
-        </ion-button>
+    <div class="receitamensal">
+      <ion-row>
+        <ion-col size="4">
+          <ion-item *ngFor="let r of receitasMensal">
+            <ion-label  color="success">
+              Receita
+              <p>{{r[0]}}</p>
+            </ion-label>
+          </ion-item>
       </ion-col>
       <ion-col size="4">
-        <ion-button size="large"(click)="adicionar()">
-          <div class="adicionar">
-          <ion-icon name="add-circle-outline"></ion-icon>
-          <ion-text>Adicionar</ion-text>
-          </div>
-        </ion-button>
+        <ion-item *ngFor="let d of despesasMensal">
+          <ion-label color="danger">
+            Despesa
+            <p>{{d[0]}}</p>
+          </ion-label>
+        </ion-item>
       </ion-col>
       <ion-col size="4">
-        <ion-button size="large">
-          <div class="planeja">
-          <ion-icon name="cash-outline"></ion-icon>
-          <ion-text>Planeja...</ion-text>
-          </div>
-        </ion-button>
+        <ion-item *ngFor="let s of saldoMensal">
+          <ion-label color="primary">
+            Saldo
+            <p>{{s[0]}}</p>
+          </ion-label>
+        </ion-item>
       </ion-col>
-    </ion-row>
-  </ion-list>
-</div>
+      </ion-row>
+      </div>
+      <div class="botoes">
+      <ion-list>
+        <ion-row>
+          <ion-col size="4">
+            <ion-button (click)="inicio()">
+              <div class="inicio">
+              <ion-icon name="home-outline"></ion-icon>
+              <ion-text>Inicio</ion-text>
+              </div>
+            </ion-button>
+          </ion-col>
+          <ion-col size="4">
+            <ion-button (click)="adicionar()">
+              <div class="adicionar">
+              <ion-icon name="add-circle-outline"></ion-icon>
+              <ion-text>Adicionar</ion-text>
+              </div>
+            </ion-button>
+          </ion-col>
+          <ion-col size="4">
+            <ion-button>
+              <div class="planeja">
+              <ion-icon name="cash-outline"></ion-icon>
+              <ion-text>Planeja...</ion-text>
+              </div>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-list>
+    </div>
   </ion-toolbar>
 </ion-footer>
