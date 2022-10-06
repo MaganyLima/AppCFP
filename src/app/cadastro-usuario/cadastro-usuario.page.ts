@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 
@@ -11,7 +12,7 @@ export class CadastroUsuarioPage implements OnInit {
   email='';
   senha='';
 
-  constructor(private navCtrl: NavController) {
+  constructor(private navCtrl: NavController,public http: HttpClient) {
    }
 
   ngOnInit() {
@@ -19,11 +20,9 @@ export class CadastroUsuarioPage implements OnInit {
   }
   cadastrar(){
     this.navCtrl.navigateRoot('login');
+      this.http.post<any[]>('http://localhost/appcfp/cadastroUsuario.php',
+    {nome : this.nome, email : this.email, senha: this.senha})
+    .subscribe(valor =>{});
   }
 
-  mudancas(){
-    console.log('nome',this.nome);
-    console.log('email',this.email);
-    console.log('senha',this.senha);
-  }
 }
