@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { NavController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,8 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistrarLcmtoPage implements OnInit {
   public categoriaLan;
+  tipo='';
+  valor='';
+  data='';
+  categoria='';
+  descricao='';
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController,public http: HttpClient) {
     this.categoriaLan=[
       {nome:'Alimentação'},
       {nome:'Assinaturas'},
@@ -33,7 +39,10 @@ export class RegistrarLcmtoPage implements OnInit {
   ngOnInit() {
   }
   registrar(){
-    this.categoriaLan('');
+    this.navCtrl.navigateRoot('lancamentos');
+    this.http.post<any[]>('http://localhost/appcfp/adicionar.php',
+    {tipo : this.tipo, valor : this.valor, data: this.data, descricao : this.descricao, categoria : this.categoria})
+    .subscribe(valor =>{});
   };
   inicio(){
     this.navCtrl.navigateRoot('inicio');

@@ -1,42 +1,42 @@
 
 <ion-header>
-  <ion-toolbar>
-    <ion-title color="primary">Faça seu Cadastro</ion-title>
+  <ion-toolbar color="warning">
+    <ion-title>Faça seu Cadastro</ion-title>
   </ion-toolbar>
 </ion-header>
-
-
 <ion-content>
   <div class="titulo">
     <ion-text>Controle Finaceiro Pessoal</ion-text>
   </div>
-<!--
-  <div class="texto">
-    <ion-text>
-      Faça seu Cadastro
-    </ion-text>
-  </div>
-  -->
   <div class="cadastro">
-    <ion-item button="">
-      <ion-label position="floating">Nome</ion-label>
-      <ion-input [(ngModel)]="nome"type="text"></ion-input>
-    </ion-item>
-    <ion-item button="">
-      <ion-label position="floating">Email</ion-label>
-      <ion-input [(ngModel)]="email"type="email"></ion-input>
-    </ion-item>
-    <ion-item button="">
-      <ion-label position="floating">Senha</ion-label>
-      <ion-input [(ngModel)]="senha"type="password"></ion-input>
-    </ion-item>
-  </div>
-  <div class="botao">
-    <ion-button (click)="cadastrar()" color="success" expand="full" >
-      <div class="confirmar">
-        <ion-text>Cadastrar</ion-text>
-        <ion-icon name="checkmark-done-outline"></ion-icon>
-      </div>
-    </ion-button>
+    <form #fc="ngForm" (ngSubmit)="cadastrar()">
+      <ion-item>
+        <ion-label position="floating">Nome</ion-label>
+        <ion-input type="name" name="nome" [(ngModel)]="nome" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">E-mail</ion-label>
+        <ion-input type="email" name="email" [(ngModel)]="email" required></ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-label position="floating">Senha</ion-label>
+        <ion-input type="password" name="senha" [(ngModel)]="senha" #snh="ngModel" minlength="6" required></ion-input>
+      </ion-item>
+      <ion-text color="danger" *ngIf="snh.invalid && snh.dirty" >Mínimo 6 caracteres</ion-text>
+      <ion-item>
+        <ion-label position="floating">Confirmar Senha</ion-label>
+        <ion-input type="password" name="confsenha" [(ngModel)]="confsenha" #csnh="ngModel" required></ion-input>
+      </ion-item>
+      <ion-text color="danger" *ngIf="(snh.value !== csnh.value) && snh.dirty" >Senhas diferentes</ion-text>
+      <ion-button type="submit" color="success" expand="full" [disabled]="fc.invalid ||(snh.value !== csnh.value)  ">
+        Cadastrar
+        <ion-icon name="checkmark-outline"></ion-icon>
+      </ion-button>
+      <ion-button type="reset" color="danger" expand="full">
+        Cancelar
+        <ion-icon name="close-outline"></ion-icon>
+      </ion-button>
+    </form>
   </div>
 </ion-content>
+
