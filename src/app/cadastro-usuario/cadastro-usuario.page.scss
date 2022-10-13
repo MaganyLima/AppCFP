@@ -1,0 +1,45 @@
+ion-header{
+  text-align: center;
+  ion-title{
+  font-weight: bold;
+  font-size: 22px;
+  }
+}
+.titulo{
+  position: relative;
+  top: 30px;
+  text-align: center;
+  ion-text{
+    font-size: 28px;
+    color: gold;
+    font-weight: bold;
+  }
+}
+
+.cadastro{
+position: relative;
+top: 70px;
+}
+.botao{
+  position: relative;
+  top: 110px;
+  text-align: center;
+  height: 12%;
+  ion-button{
+    height: 100%;
+    .confirmar{
+      display: flex;
+      flex-direction: column;
+    ion-text{
+      font-size: 20px;
+    }
+    ion-icon{
+      font-size: 30px;
+      padding-left: 40%;
+
+    }
+    }
+
+  }
+
+}

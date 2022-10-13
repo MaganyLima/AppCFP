@@ -1,0 +1,100 @@
+ion-header{
+  text-align: center;
+  ion-title{
+  font-size: 20px;
+  font-weight: bold;
+  }
+}
+.lancamentos{
+  position: relative;
+  top: 10px;
+  ion-list{
+    ion-item{
+      h1{
+        font-size: 8px;
+        font-weight: bold;
+      }
+      p{
+        font-size: 8px;
+      }
+    #despesa{
+      font-size: 10px;
+      font-weight: bold;
+      color: red;
+      }
+    #receita{
+      font-size: 10px;
+      font-weight: bold;
+      color: green;
+    }
+    }
+
+  }
+}
+.receitamensal{
+  ion-label{
+    font-size: 12px;
+    p{
+      font-size: 10px;
+    }
+
+  }
+
+}
+ion-footer{
+  .botoes{
+  position:static;
+  top: 260px;
+  ion-button{
+    width: 100%;
+  }
+  .inicio{
+    height: 100px;
+    padding: 30px;
+    margin: 0 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  ion-icon{
+    font-size: 30px;
+  }
+  ion-text{
+    font-size: 10px;
+    text-align: center;
+    }
+  }
+  .adicionar{
+    height: 100px;
+    padding: 30px;
+    margin: 0 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  ion-icon{
+    font-size: 30px;
+    margin-left: 15px;
+  }
+  ion-text{
+    font-size: 10px;
+    text-align: center;
+  }
+  }
+  .planeja{
+    height: 100px;
+    padding: 30px;
+    margin:0 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  ion-icon{
+    font-size: 30px;
+    margin-left: 15px;
+  }
+  ion-text{
+    font-size: 10px;
+    text-align: center;
+  }
+  }
+}
+}
+

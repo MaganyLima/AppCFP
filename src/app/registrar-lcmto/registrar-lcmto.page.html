@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title color="primary">Registrar Lançamento</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <div class="tipolancamento">
+    <ion-list>
+      <ion-item>
+        <ion-select [(ngModel)]="tipo" interface="action-sheet" placeholder="Tipo de Registro">
+          <ion-select-option >Despesa</ion-select-option>
+          <ion-select-option >Receita</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <ion-item>
+      <ion-label position="floating">Valor R$</ion-label>
+      <ion-input [(ngModel)]="valor" type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Data</ion-label>
+      <ion-input [(ngModel)]="data" type="date"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Descrição</ion-label>
+      <ion-input [(ngModel)]="descricao" type="text"></ion-input>
+    </ion-item>
+    <ion-item >
+      <ion-select [(ngModel)]="categoria" interface="action-sheet" placeholder="Categoria">
+        <ion-select-option ngDefaultCotrol [value]="ctg.nome"*ngFor="let ctg of categoriaLan">
+          {{ctg.nome}}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+  </div>
+  <div class="botao">
+    <ion-button (click)="registrar()"color="success" size="large" >
+      <div class="confirma">
+        <ion-icon name="checkmark-outline"></ion-icon>
+        <ion-text>Confirmar</ion-text>
+      </div>
+    </ion-button>
+  </div>
+  <div class="botoes">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          <ion-button (click)="inicio()" size="large">
+            <div class="inicio">
+            <ion-icon name="home-outline"></ion-icon>
+            <ion-text>Inicio</ion-text>
+            </div>
+          </ion-button>
+        </ion-col>
+        <ion-col size="4">
+          <ion-button (click)="lancamento()" size="large">
+            <div class="lancam">
+            <ion-icon name="swap-horizontal-outline"></ion-icon>
+            <ion-text>Lançam...</ion-text>
+            </div>
+          </ion-button>
+        </ion-col>
+        <ion-col size="4">
+          <ion-button size="large">
+            <div class="planejam">
+              <ion-icon name="cash-outline"></ion-icon>
+              <ion-text>Planeja...</ion-text>
+            </div>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
