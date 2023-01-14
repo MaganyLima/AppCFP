@@ -22,13 +22,14 @@ export class CadastroUsuarioPage implements OnInit {
 
   }
   cadastrar(){
-    console.log('Enviado :' ,this.nome,this.email,this.senha,this.confsenha);
     /*
+    console.log('Enviado :' ,this.nome,this.email,this.senha,this.confsenha);
+    */
     this.navCtrl.navigateRoot('login');
       this.http.post<any[]>('http://localhost/appcfp/cadastroUsuario.php',
     {nome : this.nome, email : this.email, senha: this.senha})
     .subscribe(valor =>{});
-    */
+
   }
   cancelar(){}
 }

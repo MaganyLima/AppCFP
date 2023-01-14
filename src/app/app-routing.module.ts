@@ -12,7 +12,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'cadastro-usuario',
+    path: 'lancamentos',
     loadChildren: () => import('./cadastro-usuario/cadastro-usuario.module').then( m => m.CadastroUsuarioPageModule)
   },
   {
@@ -30,6 +30,14 @@ const routes: Routes = [
   {
     path: 'registrar-lcmto',
     loadChildren: () => import('./registrar-lcmto/registrar-lcmto.module').then( m => m.RegistrarLcmtoPageModule)
+  },
+  {
+    path: 'add-receita',
+    loadChildren: () => import('./add-receita/add-receita.module').then( m => m.AddReceitaPageModule)
+  },
+  {
+    path: 'add-despesa',
+    loadChildren: () => import('./add-despesa/add-despesa.module').then( m => m.AddDespesaPageModule)
   },
 ];
 
